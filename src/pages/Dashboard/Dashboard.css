@@ -26,7 +26,7 @@
 .metric-card {
   background: white;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.6rem; /* slightly increased padding for better alignment */
   display: flex;
   align-items: center;
   gap: 1.25rem;
