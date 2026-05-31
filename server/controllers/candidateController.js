@@ -3,6 +3,7 @@ import db from '../db/init.js';
 // Get all candidates
 export const getAllCandidates = (req, res) => {
   try {
+    // console.log("Fetching all candidates from DB..."); // TODO: remove later
     const candidates = db.prepare('SELECT * FROM Candidates ORDER BY created_at DESC').all();
     res.json({ success: true, data: candidates });
   } catch (error) {
