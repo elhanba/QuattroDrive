@@ -23,6 +23,7 @@ export default function DocumentCenter() {
       }
     } catch (err) {
       console.error('Failed to fetch candidates');
+      // TODO: show a toast notification if this fails so user knows what happened
     }
   };
 
