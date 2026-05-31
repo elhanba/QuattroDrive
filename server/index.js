@@ -40,8 +40,12 @@ const seedAdmin = async () => {
   }
 };
 
-// Start internal server
-app.listen(PORT, async () => {
-  await seedAdmin();
-  console.log(`Express server is listening on port ${PORT}`);
-});
+// Start internal server only if not testing
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, async () => {
+    await seedAdmin();
+    console.log(`Express server is listening on port ${PORT}`);
+  });
+}
+
+export default app;

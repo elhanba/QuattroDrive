@@ -13,8 +13,8 @@ if (!fs.existsSync(dbDir)) {
 }
 
 // Initialize SQLite Database
-const dbPath = path.join(dbDir, 'quattrodrive.db');
-const db = new Database(dbPath, { verbose: console.log });
+const dbPath = process.env.NODE_ENV === 'test' ? ':memory:' : path.join(dbDir, 'quattrodrive.db');
+const db = new Database(dbPath, { verbose: process.env.NODE_ENV === 'test' ? undefined : console.log });
 
 // Create Tables if they don't exist
 const initDb = () => {
