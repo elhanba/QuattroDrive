@@ -3,7 +3,7 @@
 A modern driving school management app. We're building this to help local driving instructors keep track of candidates, schedule lessons, and generate official printable PDFs for the ministry. 
 
 ## Stack
-- Frontend: React + Vite (Vanilla CSS for styling, no tailwind bs)
+- Frontend: React + Vite (Vanilla CSS for styling, no tailwind)
 - Backend: Express.js
 - Database: SQLite (better-sqlite3)
 - Wrapped in Electron so it can run as a standalone desktop app!
